@@ -27,8 +27,8 @@ return [
     'storage_size' => env('MAX_STORAGE_SIZE', '2147483648'),
     'tutorial_video_link' => env('TUTORIAL_VIDEO_LINK', 'https://youtu.be/jan5CFWs9ic'),
 
-    'owner_email' => 'suraj2002mail@gmail.com',
-    'owner_help_link' => 'https://github.com/suraj-repositories/Poly-book-lib/issues/new',
+    'owner_email' => env('OWNER_EMAIL'),
+    'owner_help_link' => env('OWNER_HELP_LINK'),
 
     'razorpay_public_key' => env('RAZORPAY_KEY', ''),
 
@@ -72,7 +72,7 @@ return [
     'url' => env('APP_URL', 'http://localhost'),
 
     // 'asset_url' => env('ASSET_URL'),
-    'asset_url' => env('ASSET_URL', 'https://polybooklib.oranbyte.com/public'),
+     'asset_url' => env('ASSET_URL', 'https://polybooklib.oranbyte.com/public'),
 
     /*
     |--------------------------------------------------------------------------
