@@ -12,10 +12,10 @@ class DownloadController extends Controller
     //
 
     public function index(){
-        $downloads = Download::orderBy('id', 'desc')->get();
+        $downloads = Download::orderBy('id', 'desc')->withTrashed()->get();
         $startDate = Carbon::now()->subDays(30)->startOfDay();
         $endDate = Carbon::now()->endOfDay();
-        $last30days = Download::whereBetween('created_at', [$startDate, $endDate])->count();
+        $last30days = Download::whereBetween('created_at', [$startDate, $endDate])->withTrashed()->count();
         return view('admin.download.downloads', compact('downloads', 'last30days'));
     }
 }
