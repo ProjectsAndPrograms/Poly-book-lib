@@ -20,5 +20,6 @@ return [
         'admin.downloads.index' => ['download', 'downloaders', 'downloads'],
         'admin.transaction.index' => ['transactions', 'payments', 'money']
 
-    ]
+    ],
+    'web' => []
 ];
