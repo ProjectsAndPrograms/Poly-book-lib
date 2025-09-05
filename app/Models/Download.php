@@ -24,7 +24,7 @@ class Download extends Model
 
     public function downloadable()
     {
-        return $this->morphTo();
+        return $this->morphTo()->withTrashed();;
     }
 
     // this will defines the book relation
