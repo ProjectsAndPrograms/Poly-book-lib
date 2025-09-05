@@ -8,10 +8,11 @@ use App\Traits\Purchasable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Book extends Model
 {
-    use HasFactory, Downloadable, Purchasable;
+    use HasFactory, Downloadable, Purchasable, SoftDeletes;
 
     protected $fileable = [
         'title',
