@@ -99,7 +99,7 @@
                                             <td>{{ $loop->iteration }}</td>
                                             <td>
                                                 <div class="d-flex align-items-center">
-                                                    <img src="{{ $download->book->getCoverPageUrl() ?? '#' }}"
+                                                   <img src="{{ $download?->book?->getCoverPageUrl() ?? '#' }}"
                                                         alt="" class="avatar-xs rounded-circle me-2">
                                                     <div>
                                                         <a href="{{ route('books.show', $download->book->id) }}">
