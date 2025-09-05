@@ -114,7 +114,7 @@ class BookController extends Controller
         if (!$book) {
             return abort('404', 'Branch Not Found!');
         }
-        $this->fileService->deleteIfExists($book->cover_image);
+        // $this->fileService->deleteIfExists($book->cover_image);
 
         $book->delete();
 
